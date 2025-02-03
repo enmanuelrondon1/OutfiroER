@@ -137,7 +137,7 @@ const Collection = () => {
                 <Item product={product} key={product._id} />
               ))
             ) : (
-              <p className="capitalize ">
+              <p className="capitalize">
                 No products found for this category.
               </p>
             )}
