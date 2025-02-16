@@ -93,34 +93,6 @@ const adminLogin = async (req, res) => {
   }
 };
 
-// TODO:CODIGO SACADO DE CLAUDE
-// const adminLogin = async (req, res) => {
-//   try {
-//     const { email, password } = req.body;
 
-//     if(email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASS) {
-//       // Creamos un payload fijo
-//       const payload = {
-//         email,
-//         role: 'admin',
-//         // No incluimos iat ni información temporal
-//       };
-
-//       const token = jwt.sign(payload, process.env.JWT_SECRET);
-//       res.json({ success: true, token });
-//     } else {
-//       res.status(401).json({
-//         success: false,
-//         message: "Invalid Credentials"
-//       });
-//     }
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({
-//       success: false,
-//       message: "Internal server error"
-//     });
-//   }
-// };
 
 export { loginUser, registerUser, adminLogin };

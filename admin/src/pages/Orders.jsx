@@ -46,41 +46,7 @@ export const Orders = ({ token }) => {
     }
   };
 
-  // TODO:SACADO DE CLAUDE 
-  // const statusHandler = async (e, orderId) => {
-  //   const newStatus = e.target.value;
-    
-  //   // Actualizar el estado local inmediatamente
-  //   setOrders(prevOrders => 
-  //     prevOrders.map(order => 
-  //       order._id === orderId 
-  //         ? { ...order, status: newStatus }
-  //         : order
-  //     )
-  //   );
-  
-  //   try {
-  //     const response = await axios.post(
-  //       `${backend_url}/api/order/status`, 
-  //       {
-  //         orderId,
-  //         status: newStatus
-  //       }, 
-  //       { headers: { token } }
-  //     );
-  //     console.log(response.data);
-  //     if (!response.data.success) {
-  //       // Si la actualización falla, revertimos al estado anterior
-  //       toast.error(response.data.message);
-  //       fetchAllOrders(); // Recargar el estado real del servidor
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     toast.error("Error al actualizar el estado");
-  //     fetchAllOrders(); // Recargar el estado real del servidor
-  //   }
-  // };
-
+ 
   useEffect(() => {
     fetchAllOrders();
   }, [token]);

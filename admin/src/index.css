@@ -293,3 +293,92 @@ select,input,textarea{
     @apply text-[14px] font-[700];
   }
 }
+
+/* Estilos para el formulario de edición */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+/* Estilos para los dropdowns */
+select {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+button.bg-gray-500 {
+  background-color: #6b7280;
+}
+
+button.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe; /* Color de fondo */
+}
+
+.text-blue-800 {
+  color: #1e40af; /* Color del texto */
+}
+
+.rounded {
+  border-radius: 0.25rem; /* Bordes redondeados */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Tamaño del texto */
+}
+
+.px-2 {
+  padding-left: 0.5rem; /* Espaciado horizontal */
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem; /* Espaciado vertical */
+  padding-bottom: 0.25rem;
+}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaFileUpload } from "react-icons/fa";
 import upload from "../assets/upload.jpeg";
 import { backend_url } from "../App";
 import axios from "axios";

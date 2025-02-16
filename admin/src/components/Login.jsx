@@ -26,50 +26,6 @@ export const Login = ({ setToken }) => {
     }
   };
 
-  // const onSubmitHandler = async (e) => {
-  //   try {
-  //     e.preventDefault();
-
-  //     // Validar campos obligatorios
-  //     if (!email || !password) {
-  //       alert("Por favor, completa todos los campos.");
-  //       return;
-  //     }
-
-  //     // Enviar solicitud al servidor
-  //     const response = await axios.post(backend_url + "/api/user/admin", {
-  //       email,
-  //       password,
-  //     });
-
-  //     // Manejar la respuesta exitosa
-  //     if (response.data.success) {
-  //       alert("Inicio de sesión exitoso.");
-  //       console.log("Token recibido:", response.data.token);
-  //       // Aquí puedes redirigir al usuario o guardar el token en el estado/localStorage
-  //     } else {
-  //       alert("Credenciales inválidas. Por favor, inténtalo de nuevo.");
-  //     }
-  //   } catch (error) {
-  //     // Manejar errores
-  //     console.error("Error en la solicitud:", error);
-
-  //     if (error.response) {
-  //       // El servidor respondió con un código de estado fuera del rango 2xx
-  //       if (error.response.status === 401) {
-  //         alert("Credenciales inválidas. Por favor, inténtalo de nuevo.");
-  //       } else {
-  //         alert("Ocurrió un error en el servidor. Por favor, inténtalo más tarde.");
-  //       }
-  //     } else if (error.request) {
-  //       // La solicitud fue hecha pero no se recibió respuesta
-  //       alert("No se recibió respuesta del servidor. Por favor, verifica tu conexión a internet.");
-  //     } else {
-  //       // Ocurrió un error al configurar la solicitud
-  //       alert("Ocurrió un error al enviar la solicitud. Por favor, inténtalo de nuevo.");
-  //     }
-  //   }
-  // };
 
   return (
     <div className="absolute top-0 left-0 h-full w-full z-50 bg-white ">
