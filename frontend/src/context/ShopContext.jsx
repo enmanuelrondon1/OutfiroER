@@ -91,42 +91,7 @@ export const ShopContextProvider = (props) => {
     }
   };
 
-  // TODO: SACADO DE CLAUDE 
-  // const updatedQuantity = async (itemId, size, quantity) => {
-  //   try {
-  //     // Verificar que los parámetros necesarios existen
-  //     if (!itemId || !size) {
-  //       throw new Error('ItemId y size son requeridos');
-  //     }
-  
-  //     let cartData = structuredClone(cartItems);
-      
-  //     // Verificar que el item existe en el carrito
-  //     if (!cartData[itemId]) {
-  //       cartData[itemId] = {};
-  //     }
-      
-  //     cartData[itemId][size] = quantity;
-  //     setCartItems(cartData);
-  
-  //     if (token) {
-  //       const response = await axios.post(
-  //         `${backendUrl}/api/cart/update`,
-  //         { itemId, size, quantity },
-  //         { headers: { token } }
-  //       );
-        
-  //       // Verificar la respuesta
-  //       if (!response.data) {
-  //         throw new Error('No se recibió respuesta del servidor');
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error('Error en updatedQuantity:', error);
-  //     toast.error(error.message || 'Error al actualizar el carrito');
-  //     // Podrías querer revertir el cambio en el estado si la llamada al servidor falla
-  //   }
-  // };
+
  
 
 
@@ -148,25 +113,6 @@ export const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
-  // TODO:SACADO DE CLAUDE 
-  // const getCartAmount = () => {
-  //   let totalAmount = 0;
-  //   for (const items in cartItems) {
-  //     let itemInfo = products.find((product) => product._id === items);
-  //     // Verificar que itemInfo existe antes de usarlo
-  //     if (itemInfo) {
-  //       for (const item in cartItems[items]) {
-  //         if (cartItems[items][item] > 0) {
-  //           totalAmount += itemInfo.price * cartItems[items][item];
-  //         }
-  //       }
-  //     } else {
-  //       console.warn(`Producto con ID ${items} no encontrado`);
-  //     }
-  //   }
-  //   return totalAmount;
-  // };
-  
 
  
 
@@ -202,6 +148,7 @@ export const ShopContextProvider = (props) => {
   }
 
   useEffect(() => {
+    console.log("🛠 Backend URL en uso:", import.meta.env.VITE_BACKEND_URL);
     if (!token && localStorage.getItem("token")) {
       setToken(localStorage.getItem("token"));
       getUserCart(localStorage.getItem("token"));

@@ -60,6 +60,7 @@ const Collection = () => {
     let sorted = applySorting(filtered);
     setFilteredProducts(sorted);
     setCurrentPage(1);
+    console.log("Productos filtrados:", sorted);
   }, [category, subCategory, products, search, sortType, showSearch]);
 
   const getPaginatedProducts = () => {
@@ -136,7 +137,7 @@ const Collection = () => {
                 <Item product={product} key={product._id} />
               ))
             ) : (
-              <p className="capitalize ">
+              <p className="capitalize">
                 No products found for this category.
               </p>
             )}
